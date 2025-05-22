@@ -1,0 +1,195 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffed4c;
+}
+
+/* Intro Section (for home.html) */
+.intro {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+.nirvana-logo {
+    width: 60%;
+    max-width: 500px;
+    opacity: 0;
+    animation: logoFadeIn 2s ease-out forwards;
+}
+
+.nirvana-text {
+    font-size: 64px;
+    font-family: 'Arial Black', sans-serif;
+    margin-top: 20px;
+    opacity: 0;
+    animation: textFadeIn 3s ease-out 1.5s forwards;
+}
+
+/* Group Info Section (used on both home.html and group.html) */
+.group-info {
+    text-align: center;
+    opacity: 0;
+    padding: 20px;
+    animation: textScroll 2s ease-out 0.3s forwards;
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+    margin-top: 15%;
+    height: 60vh;
+}
+
+/* STRELKA */
+.arrow {
+    font-size: 40px;
+    animation: moveUpDown 1.5s ease-in-out infinite;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+/* Band Members Section (for group.html) */
+.band-member {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.band-member h2 {
+    font-size: 36px;
+    color: #ffed4c;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInText 5s ease-out forwards;
+}
+
+.band-member p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInText 5s ease-out forwards;
+    height: 100vh;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textScroll {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInImage {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact and Albums Pages */
+.contact-info, .albums-info {
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 2s ease-out forwards;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-info h1, .albums-info h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 0.3s forwards;
+}
+
+.contact-info p, .albums-info p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 0.6s forwards;
+}
+
+.contact-info a {
+    color: #ffed4c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: white;
+}
