@@ -12,16 +12,15 @@ body, html {
 header {
     background-color: #333;
     padding: 10px 0;
-    overflow-x: auto; /* Добавляем горизонтальную прокрутку для меню */
-    white-space: nowrap; /* Запрещаем перенос элементов на новую строку */
+    text-align: center;  /* Центруємо контент всередині хедера */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
     margin: 0;
     display: flex;
+    justify-content: center; /* Центруємо елементи навігації */
     flex-wrap: nowrap; /* Отключаем перенос строк */
 }
 
@@ -60,6 +59,7 @@ nav ul li a:hover {
     max-width: 500px;
     opacity: 0;
     animation: logoFadeIn 2s ease-out forwards;
+    margin-top: 30%;
 }
 
 .nirvana-text {
@@ -68,6 +68,7 @@ nav ul li a:hover {
     margin-top: 20px;
     opacity: 0;
     animation: textFadeIn 3s ease-out 1.5s forwards;
+    height: 100vh;
 }
 
 /* Group Info Section (used on both home.html and group.html) */
