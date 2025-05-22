@@ -193,3 +193,37 @@ nav ul li a:hover {
 .contact-info a:hover {
     color: white;
 }
+
+/* Для экранов с шириной до 768px */
+@media screen and (max-width: 768px) {
+    body, html {
+        font-size: 16px;
+    }
+
+    .intro {
+        height: auto;  /* Высота блока будет автоматически подстраиваться */
+        padding: 20px;
+    }
+
+    .nirvana-logo {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .nirvana-text {
+        font-size: 4rem;  /* Увеличиваем шрифт для заголовка */
+    }
+
+    .group-info {
+        margin-top: 10%;
+        font-size: 16px; /* Уменьшаем размер шрифта для текста */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Меньше шрифт для навигации */
+    }
+
+    .arrow {
+        font-size: 30px; /* Уменьшаем стрелку */
+    }
+}
