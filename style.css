@@ -12,6 +12,8 @@ body, html {
 header {
     background-color: #333;
     padding: 10px 0;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку для меню */
+    white-space: nowrap; /* Запрещаем перенос элементов на новую строку */
 }
 
 nav ul {
@@ -19,6 +21,8 @@ nav ul {
     padding: 0;
     text-align: center;
     margin: 0;
+    display: flex;
+    flex-wrap: nowrap; /* Отключаем перенос строк */
 }
 
 nav ul li {
@@ -217,6 +221,16 @@ nav ul li a:hover {
     .group-info {
         margin-top: 10%;
         font-size: 16px; /* Уменьшаем размер шрифта для текста */
+    }
+
+    nav ul {
+        display: block;  /* Меню будет отображаться как блок */
+        overflow-x: auto; /* Позволяет прокручивать меню по горизонтали */
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
     }
 
     nav ul li a {
